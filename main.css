@@ -6,20 +6,22 @@ body{
 }
 
 header{
-    background-color: cadetblue; 
-    color: ivory;
+    background: linear-gradient(to right bottom, lightcoral, lightsalmon, lightgoldenrodyellow, lightgreen, lightblue, lightskyblue, plum); 
+    color: saddlebrown;
     padding: 10px;
     font-size: 16pt;
+    font-weight: bold;
     text-align: center;
 }
 
 footer{
-    background-color: cadetblue;
-    color: ivory;
+    background: linear-gradient(to right bottom, lightcoral, lightsalmon, lightgoldenrodyellow, lightgreen, lightblue, lightskyblue, plum);
+    color: saddlebrown;
     padding: 10px;
     font-size: 16pt;
     font-style: italic;
     text-align: center;
+    font-weight: bold;
 }
 
 a{
