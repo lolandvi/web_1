@@ -21,3 +21,26 @@ footer{
     font-style: italic;
     text-align: center;
 }
+
+a{
+    color: darkolivegreen; 
+    text-decoration: none; 
+}
+
+a:visited{
+    color: plum;
+}
+
+a:hover{
+    color: white;
+    text-decoration: underline;
+    background-color: peachpuff;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+a:active{
+    color: peachpuff;
+    background-color: white;
+}
