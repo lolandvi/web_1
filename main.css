@@ -6,32 +6,49 @@ body{
 }
 
 header{
-    background: linear-gradient(to right bottom, lightcoral, lightsalmon, lightgoldenrodyellow, lightgreen, lightblue, lightskyblue, plum); 
-    color: saddlebrown;
+    background-color: cadetblue;
+    color: ivory;
     padding: 10px;
     font-size: 16pt;
     font-weight: bold;
     text-align: center;
+    transition: 1000ms;
+}
+
+header:hover{
+    background: linear-gradient(to right bottom, lightcoral, lightsalmon, lightgoldenrodyellow, lightgreen, lightblue, lightskyblue, plum); 
+    transition: 600ms;
+    font-size: 20;
+    color: saddlebrown;
 }
 
 footer{
-    background: linear-gradient(to right bottom, lightcoral, lightsalmon, lightgoldenrodyellow, lightgreen, lightblue, lightskyblue, plum);
-    color: saddlebrown;
+    background-color: cadetblue;
+    color: ivory;
     padding: 10px;
     font-size: 16pt;
     font-style: italic;
     text-align: center;
     font-weight: bold;
+    transition: 1000ms;
+}
+
+footer:hover{
+    background: linear-gradient(to right bottom, lightcoral, lightsalmon, lightgoldenrodyellow, lightgreen, lightblue, lightskyblue, plum); 
+    transition: 600ms;
+    font-size: 20;
+    color: saddlebrown;
 }
 
 a{
     color: darkolivegreen; 
     text-decoration: none; 
     transition: 1100ms;
+    font-size: 16pt;
 }
 
 a:visited{
-    color: plum;
+    color: cadetblue;
 }
 
 a:hover{
