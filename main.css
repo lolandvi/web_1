@@ -1,0 +1,23 @@
+body{
+    background-color: ivory;
+    color: saddlebrown;
+    font-family: Cambria;
+    margin: 0px;
+}
+
+header{
+    background-color: cadetblue; 
+    color: ivory;
+    padding: 10px;
+    font-size: 16pt;
+    text-align: center;
+}
+
+footer{
+    background-color: cadetblue;
+    color: ivory;
+    padding: 10px;
+    font-size: 16pt;
+    font-style: italic;
+    text-align: center;
+}
