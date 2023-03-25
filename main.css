@@ -31,6 +31,7 @@ footer{
     text-align: center;
     font-weight: bold;
     transition: 1000ms;
+    position: fixed;
 }
 
 footer:hover{
