@@ -15,6 +15,18 @@
                 width: 500px;
                 height: 120px;
                 overflow: auto;
+                position: relative;
+                background: linear-gradient(#20B2AA, #5F9EA0);
+                color: white
+            }
+            .second {
+                z-index: 1;
+                left: 380px;
+                top: 120px;
+                position: fixed;
+            }
+            .second:hover {
+                z-index: 2;
             }
         </style>
     </head>
@@ -32,7 +44,7 @@
                 действия или способ производства чего-либо.
             </div>
 
-            <div>
+            <div class="second">
                 Конечно, тут много деталей, но для базового понимания финансовый
                 инструмент удобно представлять как инженерный инструмент или объект.
                 Это не сложнее, чем представить, зачем нужен циркуль, 
