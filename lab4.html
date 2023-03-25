@@ -17,16 +17,17 @@
                 overflow: auto;
                 position: relative;
                 background: linear-gradient(#20B2AA, #5F9EA0);
-                color: white
+                color: white;
+                z-index: 1;
+            }
+            div:hover {
+                z-index: 2;
             }
             .second {
-                z-index: 1;
+                z-index: 0;
                 left: 380px;
                 top: 120px;
                 position: fixed;
-            }
-            .second:hover {
-                z-index: 2;
             }
         </style>
     </head>
