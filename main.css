@@ -32,6 +32,9 @@ footer{
     font-weight: bold;
     transition: 1000ms;
     position: fixed;
+    top: 920px;
+    right: 0px;
+    left: 0px;
 }
 
 footer:hover{
