@@ -13,6 +13,10 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b  + ' равна ' + result)
         }
+        function showAuthors() {
+            let authors = 'Ветрова Лолита и Клопенкова Виктория'
+            alert('Авторы страницы:\n' + authors)
+        }
     </script>
     <style>
         .message {
@@ -28,16 +32,16 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthors()">
         НГТУ, ФБ, Лабораторная работа 4
     </header>
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто авторы страницы</div>
+        <div class="message" onclick="showAuthors()">Узнать, кто авторы страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="showAuthors()">
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
     </footer>
 </body>
