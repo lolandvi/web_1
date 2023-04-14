@@ -22,6 +22,10 @@ header:hover{
     color: saddlebrown;
 }
 
+main{
+    margin: 10px 20px;
+}
+
 footer{
     background-color: cadetblue;
     color: ivory;
