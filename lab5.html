@@ -43,6 +43,13 @@
             let authors = 'Ветрова Лолита и Клопенкова Виктория'
             alert('Авторы страницы:\n' + authors)
         }
+        function changeOutput(buttonNum, backColor, textColor, bordColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderColor = bordColor;
+        }
     </script>
     <style>
         .message {
@@ -55,6 +62,14 @@
             text-align: center;
             cursor: pointer;
         }
+
+        #output {
+            border: 2px solid;
+            border-color: cadetblue;
+            background-color: white;
+            width: 230px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
@@ -65,11 +80,21 @@
     <main>
         <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
         <div class="message" onclick="showMin()">Найти разность чисел</div>
         <div class="message" onclick="showUm()">Найти произведение чисел</div>
         <div class="message" onclick="showDel()">Найти деление</div>
         <div class="message" onclick="showAuthors()">Узнать, кто авторы страницы</div>
+        
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'lightpink', 'white', 'lightblue')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'lightblue', 'white', 'lightgreen')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'lightgreen', 'white', 'lightgray')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'lightgray', 'black', 'lightblue')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="showAuthors()">
