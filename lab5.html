@@ -50,8 +50,29 @@
             output.style.color = textColor;
             output.style.borderColor = bordColor;
         }
+        function price(aPrice, pPrice, oPrice, mPrice, wPrice) {
+            let output = document.getElementById('price');
+            let inputApple = document.getElementById('apple');
+            let inputPear = document.getElementById('pear');
+            let inputOrange = document.getElementById('orange');
+            let inputMelon = document.getElementById('melon');
+            let inputWatermelon = document.getElementById('watermelon');
+            let apple = parseInt(inputApple.value);
+            let orange = parseInt(inputOrange.value);
+            let pear = parseInt(inputPear.value);
+            let melon = parseInt(inputMelon.value);
+            let watermelon = parseInt(inputWatermelon.value);
+            summPrice = apple * aPrice + pear * pPrice + orange * oPrice + melon * mPrice + watermelon * wPrice;
+            output.innerHTML = 'Общая цена: ' + summPrice;
+        }
     </script>
     <style>
+        input {
+            border: 2px solid;
+            border-color: cadetblue;
+            background-color: white;
+            margin-bottom: 5px;
+        }
         .message {
             background-color: white;
             border: 2px solid;
@@ -61,14 +82,19 @@
             display: inline-block;
             text-align: center;
             cursor: pointer;
+            margin-bottom: 5px;
         }
-
         #output {
             border: 2px solid;
             border-color: cadetblue;
             background-color: white;
             width: 230px;
             height: 20px;
+        }
+        #price {
+            background-color: cadetblue;
+            color: white;
+            width: 177px;
         }
     </style>
 </head>
@@ -87,6 +113,7 @@
         <div class="message" onclick="showDel()">Найти деление</div>
         <div class="message" onclick="showAuthors()">Узнать, кто авторы страницы</div>
         
+        <div style="margin-top: 100px;"></div>
         <div>
             <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'lightpink', 'white', 'lightblue')">
             <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'lightblue', 'white', 'lightgreen')">
@@ -95,6 +122,16 @@
         </div>
 
         <div id="output"></div>
+        
+        <div style="margin-top: 100px;"></div>
+        <label>Яблоки (100р/шт)<br><input type="number" value="1" id="apple"></label><br>
+        <label>Груши (80р/шт)<br><input type="number" value="1" id="pear"></label><br>
+        <label>Апельсины (150р/шт)<br><input type="number" value="1" id="orange"></label><br>
+        <label>Дыни (300р/шт)<br><input type="number" value="1" id="melon"></label><br>
+        <label>Арбузы (250р/шт)<br><input type="number" value="1" id="watermelon"></label><br>
+        <input type="button" value="Рассчитать" onclick="price(100, 80, 150, 300, 250)">
+
+        <div id="price"> Общая цена:  </div>
     </main>
 
     <footer onclick="showAuthors()">
