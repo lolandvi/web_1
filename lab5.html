@@ -69,6 +69,19 @@
             let inputCircle = document.getElementById('circle'+number);
             let c = inputCircle.style.visibility = 'collapse';
         }
+
+        function adn (a, d, n) {
+            let arr = [];
+            for (let i = 1; i < n; i++) {
+                let result = a + d * (n-i);
+                arr[i-1] = result;
+            }
+            alert (arr)
+        }
+
+        function max (a, b, c) {
+            alert(Math.max(a, b, c));
+        }
     </script>
     <style>
         input {
@@ -166,6 +179,9 @@
         <div class="circle" style="background-color: maroon;" id="circle8" onclick="push(8)"><span>8</span></div>
         <div class="circle" style="background-color: yellow;" id="circle9" onclick="push(9)"><span>9</span></div>
         <div class="circle" style="background-color: cyan;" id="circle10" onclick="push(10)"><span>10</span></div>
+
+        <div onclick="adn(1, 2, 3)">Прогрессия</div>
+        <div onclick="max(5, 3, 7)">Максимальное</div>
     </main>
 
     <footer onclick="showAuthors()">
