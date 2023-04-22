@@ -59,6 +59,12 @@
             input.value = '';
             count = 0;
         }
+        function rules() {
+            let outtext = document.getElementById('text');
+            outtext.innerHTML = 'А. Нажмите кнопку "Сыграть в игру"\nB. Угадывайте числа с помощью подсказок';
+            let seee = document.getElementById('see');
+            seee.innerHTML = 'Скрыть правила игры'
+        }
     </script>
     <style>
         .game {
@@ -69,6 +75,19 @@
             padding: 30px;
             text-align: center;
             margin-top: 30px;
+        }
+        .help {
+            background-color: cadetblue;
+            min-width: 600px;
+            margin: auto;
+            margin-top: 100px;
+            min-height: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: black;
         }
     </style>
 </head>
@@ -101,8 +120,12 @@
                 Задуманное число: <span id="number"></span>
             </div>
             <div>
-                <button onclick="again()">Сыграть еще раз</button>
+                <button onclick="again()">Сыграть еще раз</button><br>
             </div>
+        </div>
+        <div class="help">
+            <button onclick="rules()" id="see">Показать правила игры</button>
+            <div id="text"></div>
         </div>
 
     </main>
