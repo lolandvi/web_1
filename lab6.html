@@ -75,11 +75,35 @@
             let button2 = document.getElementById('button2');
             button2.style.display = 'none';
         }
+        function changeColor(div) {
+            if (div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                div.style.color = 'blue';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'blue';
+                div.style.color = 'pink';
+                document.getElementById('color-name').innerHTML = 'синий';
+            }
+            else if (div.style.backgroundColor == 'blue') {
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'green';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+            else if (div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green';
+                div.style.color = 'yellow';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'red';
+                document.getElementById('color-name').innerHTML = 'желтый';
+            }
+        }
     </script>
     <style>
-        span {
-            color: white
-        }
         .game {
             border: 2px solid;
             border-radius: 15px;
@@ -102,6 +126,18 @@
             border-radius: 15px;
             border-color: cadetblue;
             opacity: 90%;
+            color: white;
+        }
+        .color {
+            background-color: yellow;
+            width: 300px;
+            margin: auto;
+            margin-top: 100px;
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: black;
+            color: red;
+            text-align: center;
         }
     </style>
 </head>
@@ -150,7 +186,10 @@
                 </ol>
             </span>
         </div>
-
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
     </main>
 
     <footer>
