@@ -9,6 +9,7 @@
     <script>
         let number;
         let count = 0;
+        let right = 0;
         function start() {
             number = Math.floor(Math.random() * 100) + 1;
             let screens = document.getElementsByClassName('game');
@@ -102,8 +103,27 @@
                 document.getElementById('color-name').innerHTML = 'желтый';
             }
         }
+        function moveBlock(span) {
+            if (right == 0) {
+                span.style.left = '1770px';
+                span.style.transform = 'rotate(0)';
+                span.style.transition = '500ms';
+                right = 1;
+            }
+            else {
+                span.style.left = '0px';
+                span.style.transform = 'rotate(4turn)';
+                span.style.transition = '500ms';
+                right = 0;
+            }
+            
+        }
     </script>
     <style>
+        .middle {
+            line-height: normal;
+            vertical-align: middle;
+        }
         .game {
             border: 2px solid;
             border-radius: 15px;
@@ -138,6 +158,21 @@
             border-color: black;
             color: red;
             text-align: center;
+        }
+        .move {
+            position: fixed;
+            left: 0px;
+            margin-top: 100px;
+            line-height: 140px;
+            width: 150px;
+            height: 150px;
+            background-color: cadetblue;
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transform: rotate(4turn);
         }
     </style>
 </head>
@@ -189,6 +224,11 @@
         <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="color-name">желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
+        </div>
+        <div class="middle">
+            <span class="move" onclick="moveBlock(this)">
+                Щелкни меня
+            </span>
         </div>
     </main>
 
