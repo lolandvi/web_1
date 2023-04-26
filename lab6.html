@@ -10,6 +10,7 @@
         let number;
         let count = 0;
         let right = 0;
+        let i = 50;
         function start() {
             number = Math.floor(Math.random() * 100) + 1;
             let screens = document.getElementsByClassName('game');
@@ -116,6 +117,16 @@
                 span.style.transition = '500ms';
                 right = 0;
             }
+        }
+        function expBlock(span) {
+            if (i == 900) {
+                span.style.width = 100 + 'px';
+                i = 50;
+            }
+            else {
+                span.style.width = 100 + i + 'px';
+                i += 50;
+            }
             
         }
     </script>
@@ -166,6 +177,20 @@
             line-height: 140px;
             width: 150px;
             height: 150px;
+            background-color: cadetblue;
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transform: rotate(4turn);
+        }
+        .expansion {
+            margin-left: 500px;
+            margin-top: 300px;
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
             background-color: cadetblue;
             display: inline-block;
             color: black;
@@ -228,6 +253,11 @@
         <div class="middle">
             <span class="move" onclick="moveBlock(this)">
                 Щелкни меня
+            </span>
+        </div>
+        <div class="middle">
+            <span class="expansion" onclick="expBlock(this)">
+                Щелкни 
             </span>
         </div>
     </main>
