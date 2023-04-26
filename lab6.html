@@ -60,13 +60,26 @@
             count = 0;
         }
         function rules() {
-            let outtext = document.getElementById('text');
-            outtext.innerHTML = 'А. Нажмите кнопку "Сыграть в игру"\nB. Угадывайте числа с помощью подсказок';
-            let seee = document.getElementById('see');
-            seee.innerHTML = 'Скрыть правила игры'
+            let rule = document.getElementById('rules-text');
+            rule.style.display = 'block';
+            let button = document.getElementById('button1');
+            button.style.display = 'none';
+            let button2 = document.getElementById('button2');
+            button2.style.display = 'block';
+        }
+        function hide() {
+            let rule = document.getElementById('rules-text');
+            rule.style.display = 'none';
+            let button = document.getElementById('button1');
+            button.style.display = 'block';
+            let button2 = document.getElementById('button2');
+            button2.style.display = 'none';
         }
     </script>
     <style>
+        span {
+            color: white
+        }
         .game {
             border: 2px solid;
             border-radius: 15px;
@@ -78,7 +91,7 @@
         }
         .help {
             background-color: cadetblue;
-            min-width: 600px;
+            width: 600px;
             margin: auto;
             margin-top: 100px;
             min-height: 30px;
@@ -87,7 +100,8 @@
             padding-top: 10px;
             border: 1px solid;
             border-radius: 15px;
-            border-color: black;
+            border-color: cadetblue;
+            opacity: 90%;
         }
     </style>
 </head>
@@ -124,8 +138,17 @@
             </div>
         </div>
         <div class="help">
-            <button onclick="rules()" id="see">Показать правила игры</button>
-            <div id="text"></div>
+            <button onclick="rules()" id="button1" style="display: block;">Показать правила игры</button>
+            <button onclick="hide()" id="button2" style="display: none;">Скрыть правила игры</button>
+            <span id="rules-text" style="display: none;">
+                <ol>
+                    <li>Правило 1</li>
+                    <li>Правило 2</li>
+                    <li>Правило 3</li>
+                    <li>Правило 4</li>
+                    <li>Правило 5</li>
+                </ol>
+            </span>
         </div>
 
     </main>
