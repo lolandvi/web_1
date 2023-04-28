@@ -127,7 +127,39 @@
                 span.style.width = 100 + i + 'px';
                 i += 50;
             }
-            
+        }
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if (color == 'Красный' && type == 'Футболка') {
+                wear.src = 'red-f.jpg'
+            }
+            else if (color == 'Красный' && type == 'Майка') {
+                wear.src = 'red-m.jpg'
+            }
+            else if (color == 'Красный' && type == 'Поло') {
+                wear.src = 'red-p.jpg'
+            }
+            else if (color == 'Белый' && type == 'Футболка') {
+                wear.src = 'white-f.jpg'
+            }
+            else if (color == 'Белый' && type == 'Майка') {
+                wear.src = 'white-m.jpg'
+            }
+            else if (color == 'Белый' && type == 'Поло') {
+                wear.src = 'white-p.jpeg'
+            }
+            else if (color == 'Черный' && type == 'Футболка') {
+                wear.src = 'black-f.jpg'
+            }
+            else if (color == 'Черный' && type == 'Майка') {
+                wear.src = 'black-m.jpg'
+            }
+            else {
+                wear.src = 'black-p.jpg'
+            }
         }
     </script>
     <style>
@@ -171,7 +203,7 @@
             text-align: center;
         }
         .move {
-            position: fixed;
+            position: absolute;
             left: 0px;
             margin-top: 100px;
             line-height: 140px;
@@ -198,6 +230,11 @@
             text-align: center;
             cursor: pointer;
             transform: rotate(4turn);
+        }
+
+        #wear {
+            max-width: 300px;
+            max-height: 300px;
         }
     </style>
 </head>
@@ -259,6 +296,25 @@
             <span class="expansion" onclick="expBlock(this)">
                 Щелкни 
             </span>
+        </div>
+        <div style="margin-top: 100px; margin-bottom: 100px;">
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">OK</button><br>
+
+            <img id="wear">
         </div>
     </main>
 
