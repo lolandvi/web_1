@@ -15,6 +15,34 @@
                 blocks.appendChild(block);
             }
         }
+        function showExc() {
+            let exc = [
+                70.5174,
+                70.1217,
+                70.0414,
+                70.3847,
+                70.5991,
+                70.8924,
+                71.5763,
+                72.8949,
+                72.7923,
+                73.6307,
+            ];
+            let table = document.getElementById('dollar-exc');
+            for (let i = 0; i < exc.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                td.innerHTML = exc[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            for (let i = 0; i < exc.length; i++) {
+                sum = sum + exc[i];
+            }
+            let average = sum / exc.length;
+            document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
+        }
     </script>
 </head>
 <body>
@@ -24,6 +52,10 @@
     <main>
         <button onclick="addBlocks()">Создать блоки</button>
         <div id="blocks"></div>
+
+        <button onclick="showExc()">Курс доллара</button>
+        <table border="1" id="dollar-exc"></table>
+        <div id="detail"></div>
     </main>
     <footer>
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
