@@ -9,12 +9,13 @@
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
-            for(let i = 0; i < 10; i++) {
+            for (let i = 0; i < 10; i++) {
                 let block = document.createElement('div');
                 block.innerHTML = 'Блок №' + (i + 1) + ': ' + (2 * i**2);
                 blocks.appendChild(block);
             }
         }
+
         function showExc() {
             let exc = [
                 70.5174,
@@ -43,6 +44,18 @@
             let average = sum / exc.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+
+        function addTB() {
+            let blocks = document.getElementById('tblocks');
+            for (let i = 0; i < 11; i++) {
+                let block = document.createElement('div');
+                block.style.backgroundColor = 'black';
+                block.style.width = '100px';
+                block.style.height = '100px';
+                block.style.opacity = (10 * i) + '%';
+                blocks.appendChild(block);
+            }
+        }
     </script>
 </head>
 <body>
@@ -56,6 +69,9 @@
         <button onclick="showExc()">Курс доллара</button>
         <table border="1" id="dollar-exc"></table>
         <div id="detail"></div>
+
+        <button onclick="addTB()">Создать полупрозрачные блоки</button>
+        <div id="tblocks"></div>
     </main>
     <footer>
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
