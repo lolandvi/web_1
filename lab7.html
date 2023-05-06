@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ветрова Л. А., Клопенкова В. В. Лабораторная 7</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function addBlocks() {
+            let blocks = document.getElementById('blocks');
+            for(let i = 0; i < 10; i++) {
+                let block = document.createElement('div');
+                block.innerHTML = 'Блок №' + (i + 1) + ': ' + (2 * i**2);
+                blocks.appendChild(block);
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 7
     </header>
     <main>
-
+        <button onclick="addBlocks()">Создать блоки</button>
+        <div id="blocks"></div>
     </main>
     <footer>
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
