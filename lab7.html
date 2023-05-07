@@ -54,9 +54,49 @@
                 block.style.height = '100px';
                 block.style.opacity = (10 * i) + '%';
                 blocks.appendChild(block);
+                
             }
         }
+
+        function circle() {
+            let blocks = document.getElementById('cb');
+            let input = document.getElementById('number');
+            let number = parseInt(input.value);
+            for (let i = 0; i < number; i++) {
+                let circle = document.createElement('div');
+                circle.style.width = '50px';
+                circle.style.height = '50px';
+                circle.style.borderRadius = '150px';
+                circle.style.fontSize = '24px';
+                circle.style.textAlign = 'center';
+                let num = document.createElement('span');
+                num.innerHTML = number - i;
+                if (i % 2 == 0) {
+                    circle.style.backgroundColor = 'black';
+                    num.style.color = 'white';
+                }
+                else {
+                    circle.style.backgroundColor = 'white';
+                    num.style.color = 'black';
+                }
+                circle.appendChild(num);
+                blocks.appendChild(circle);
+            }
+            
+        }
     </script>
+    <style>
+        .div {
+            text-align: center;
+            display: inline-block;
+            font-size: 24px;
+        }
+
+        span {
+            line-height: normal;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -72,6 +112,10 @@
 
         <button onclick="addTB()">Создать полупрозрачные блоки</button>
         <div id="tblocks"></div>
+
+        <input type="number" value="5" id="number" placeholder="Введите число кругов"><br>
+        <button onclick="circle()">черное/белое</button>
+        <div id="cb"></div>
     </main>
     <footer>
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
