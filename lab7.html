@@ -94,6 +94,62 @@
                 blocks.appendChild(block);
             }
         }
+
+        function TH() {
+            let exc = [
+                113000.00,
+                111900.00,
+                113250.00,
+                117300.00,
+                119800.00,
+                120900.00,
+                121650.00,
+                122250.00,
+                123250.00,
+                121350.00,
+            ];
+            let data = [
+                '05.05.2023', 
+                '04.05.2023',
+                '03.05.2023',
+                '02.05.2023',
+                '28.04.2023',
+                '27.04.2023',
+                '26.04.2023',
+                '25.04.2023',
+                '24.04.2023',
+                '21.04.2023',
+        ]
+            let table = document.getElementById('th-exc');
+            for (let i = 0; i < data.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                td.innerHTML = data[i];
+                td2.innerHTML = exc[i];
+                if (i > 0) {
+                    td3.innerHTML = exc[i] - exc[i-1];
+                }
+                else {
+                    td3.innerHTML = ' ';
+                }
+                tr.appendChild(td);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            for (let i = 0; i < exc.length; i++) {
+                sum = sum + exc[i];
+            }
+            let average = sum / exc.length;
+            let min = Math.min.apply(Math, exc);
+            let max = Math.max.apply(Math, exc);
+            document.getElementById('th').innerHTML = 'Среднее значение: ' + average;
+            document.getElementById('th2').innerHTML = 'Максимальное значение: ' + max;
+            document.getElementById('th3').innerHTML = 'Минимальное значение: ' + min;
+        }
     </script>
     <style>
         .div {
@@ -129,6 +185,12 @@
 
         <button onclick="table()">Таблица умножения</button>
         <div id="um"></div>
+
+        <button onclick="TH()">Курс акций "Транснефть"</button>
+        <table border="1" id="th-exc"></table>
+        <div id="th"></div>
+        <div id="th2"></div>
+        <div id="th3"></div>
     </main>
     <footer>
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
