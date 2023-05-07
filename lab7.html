@@ -81,8 +81,18 @@
                 }
                 circle.appendChild(num);
                 blocks.appendChild(circle);
+            } 
+        }
+
+        function table() {
+            let stud1 = 48;
+            let stud2 = 30;
+            let blocks = document.getElementById('um');
+            for (let i = 13; i < 34; i++) {
+                let block = document.createElement('div');
+                block.innerHTML = i + '*' + stud1 + '=' + (i * stud1) + ' ' + i + '*' + stud2 + '=' + (i * stud2);
+                blocks.appendChild(block);
             }
-            
         }
     </script>
     <style>
@@ -116,6 +126,9 @@
         <input type="number" value="5" id="number" placeholder="Введите число кругов"><br>
         <button onclick="circle()">черное/белое</button>
         <div id="cb"></div>
+
+        <button onclick="table()">Таблица умножения</button>
+        <div id="um"></div>
     </main>
     <footer>
         &copy; Ветрова Лолита и Клопенкова Виктория, ФБИ-11, 2 курс, 2023
