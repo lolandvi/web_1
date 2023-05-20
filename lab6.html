@@ -161,6 +161,35 @@
                 wear.src = 'black-p.jpg'
             }
         }
+
+        function one() {
+            let x_n = document.getElementById('onee');
+            let x = parseInt(x_n.value);
+            let div = document.getElementById('onediv');
+            let last = x/100;
+            let first = Math.floor(last);
+            let xx = x - (first * 100);
+            xxx = xx.toString();
+            ll = first.toString();
+            xxxx = xxx + ll;
+            div.innerHTML = xxxx;
+        }
+
+        function two() {
+            let x_n = document.getElementById('twoo');
+            let y_n = document.getElementById('twooo');
+            let x = parseInt(x_n.value);
+            let y = parseInt(y_n.value);
+            if (x == y) {
+                alert(x + y);
+            }
+            else {
+                alert(x + y);
+                alert(x * y);
+            }
+            
+        }
+
     </script>
     <style>
         .middle {
@@ -316,6 +345,15 @@
 
             <img id="wear">
         </div>
+
+        <input type="number" value="234" id="onee" placeholder="Введите вещественное число"><br>
+        <button onclick="one()">Посчитать</button>
+        <div id="onediv">вывод</div>
+
+        <input type="number" value="1" id="twoo" placeholder="Введите целое число"><br>
+        <input type="number" value="1" id="twooo" placeholder="Введите целое число"><br>
+        <button onclick="two()">Посчитать</button>
+        <div id="twodiv">вывод</div><br><br><br>
     </main>
 
     <footer>
