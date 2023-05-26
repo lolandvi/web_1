@@ -9,14 +9,14 @@
     <script src="lab8.js"></script>
     <style>
         button {
-            background-color: lightseagreen;
-            border: 1px solid;
-            border-radius: 10px;
-            border-color: black;
+            background-color: gray;
+            border: 2px solid;
+            border-color: gray;
             color: ivory;
             position: relative;
             left: 320px;
             bottom: 32px;
+            margin: 2px;
         }
         .date {
             background-color: cadetblue;
@@ -44,7 +44,7 @@
             padding: 5px;
             text-align: center;
             position: relative;
-            bottom: 40px;
+            bottom: 50px;
 
         }
     </style>
@@ -52,6 +52,7 @@
 <body onload="showDate()">
     <header>
         НГТУ, ФБ, Лабораторная работа 8
+        <div id="time">00:00:00</div>
     </header>
     <main>
         <div id="current-date1" class="date"></div>
