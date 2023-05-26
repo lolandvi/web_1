@@ -1,0 +1,22 @@
+function showDate() {
+    let today = new Date();
+    for (let i = 1; i < 6; i++) {
+        let out = document.getElementById('current-date' + i);
+        if (i == 1) {
+            out.innerHTML = 'Дата и время для русской локали: ' + today.toLocaleString('ru-RU');
+        }
+        else if (i == 2) {
+            out.innerHTML = 'Дата и время для немецкой локали: ' + today.toLocaleString('de-DE');
+        }
+        else if (i == 3) {
+            out.innerHTML = 'Дата и время для испанской локали: ' + today.toLocaleString('es-ES');
+        }
+        else if (i == 4) {
+            out.innerHTML = 'Дата и время для польской локали: ' + today.toLocaleString('pl-PL');
+        }
+        else if (i == 5) {
+            out.innerHTML = 'Дата и время для китайской локали: ' + today.toLocaleString('zh-HK');
+        }
+    }
+}
+
