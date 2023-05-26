@@ -8,13 +8,44 @@
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
     <style>
-        div {
+        button {
+            background-color: lightseagreen;
+            border: 1px solid;
+            border-radius: 10px;
+            border-color: black;
+            color: ivory;
+            position: relative;
+            left: 320px;
+            bottom: 32px;
+        }
+        .date {
             background-color: cadetblue;
             color: ivory;
             border: 1px solid;
             border-radius: 10px;
             width: 450px;
             padding: 5px;
+        }
+        .days {
+            background-color: cadetblue;
+            color: ivory;
+            border: 1px solid;
+            border-radius: 10px;
+            width: 300px;
+            padding: 5px;
+            text-align: center;
+        }
+        .days2 {
+            background-color: cadetblue;
+            color: ivory;
+            border: 1px solid;
+            border-radius: 10px;
+            width: 300px;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            bottom: 40px;
+
         }
     </style>
 </head>
@@ -23,11 +54,24 @@
         НГТУ, ФБ, Лабораторная работа 8
     </header>
     <main>
-        <div id="current-date1"></div>
-        <div id="current-date2"></div>
-        <div id="current-date3"></div>
-        <div id="current-date4"></div>
-        <div id="current-date5"></div>
+        <div id="current-date1" class="date"></div>
+        <div id="current-date2" class="date"></div>
+        <div id="current-date3" class="date"></div>
+        <div id="current-date4" class="date"></div>
+        <div id="current-date5" class="date"></div>
+        <br>
+        <div class="days">
+            <label>Дата рождения: <input type="date"></label>
+        </div>
+        <div>
+            <button onclick="showDays()">Показать число дней</button>
+        </div>
+        <div>
+            <button onclick="deleteDays()">Стереть дату</button>
+        </div>
+        <div id="output-days" class="days2">
+            Здесь выведется количество дней
+        </div>
     </main>
     <footer>
         &copy; Ветрова Лолита, ФБИ-11, 2 курс, 2023

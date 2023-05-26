@@ -20,3 +20,20 @@ function showDate() {
     }
 }
 
+function showDays() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    let out = document.getElementById('output-days');
+    out.innerHTML = daysCount;
+}
+
+function deleteDays() {
+    let inputDate = document.querySelector('input[type=date]');
+    inputDate.value = '';
+    let out = document.getElementById('output-days');
+    out.innerHTML = 'Здесь выведется количество дней';
+}
+
